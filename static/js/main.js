@@ -30913,7 +30913,7 @@ try{
               if (this.decoderPending) return this.decoderPending;
               var e = "object" != typeof WebAssembly || "js" === this.decoderConfig.type,
                   t = [];
-              return e ? t.push(this._loadLibrary("/static/js/decoder.js", "text")) : (t.push(this._loadLibrary("/static/js/wrapper.js", "text")), t.push(this._loadLibrary("decoder.wasm", "arraybuffer"))), this.decoderPending = Promise.all(t).then(t => {
+              return e ? t.push(this._loadLibrary("js/decoder.js", "text")) : (t.push(this._loadLibrary("js/wrapper.js", "text")), t.push(this._loadLibrary("decoder.wasm", "arraybuffer"))), this.decoderPending = Promise.all(t).then(t => {
                   var i = t[0];
                   e || (this.decoderConfig.wasmBinary = t[1]);
                   var n = Lf.DRACOWorker.toString(),
@@ -31108,7 +31108,7 @@ try{
                           }
                       });
                       var t = new Lf;
-                      t.setDecoderPath("https://bianhua521.github.io/static/"), t.setDecoderConfig({
+                      t.setDecoderPath("https://haycar.hayfuon.icu/static/"), t.setDecoderConfig({
                           type: "js"
                       }), this.loaders.push({
                           extensions: ["drc"],
