@@ -19,6 +19,9 @@
 <script type="text/javascript" src="static/js/main.js"></script>
 <script>
     layer.config({extend: 'haytoycar/style.css'});
+    $(".layui-layer").click(function(){
+        return false;
+    });
     var haydata = {
         layoutcolor: [
             "#f5883c", //左上角颜色
@@ -38,8 +41,8 @@
                     event: "click",  //跳转
                     href: "javascript:;",
                     function: function(){
-                        layer.msg("这是你打开后的效果...",{time:0});
-                        // layer.open({content:"内容",offset: 'b'});
+                        // layer.msg("这是你打开后的效果...",{time:2000});
+                        layer.open({content:"内容",offset: 'b'});
                         // console.log("点击测试");
                     },
                     x: -4.8,
